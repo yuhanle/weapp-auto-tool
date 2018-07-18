@@ -1,5 +1,6 @@
 <template>
   <div class="container">
+    <label class="slogan">微信小程序工具</label>
     <label class="title">请选择环境</label>
     <el-radio-group v-model="env">
       <el-radio-button label="doc"></el-radio-button>
@@ -87,11 +88,15 @@ export default {
     display: flex;
     flex-direction: column;
   }
+  .slogan {
+    font-size: 24px;
+    font-weight: bold;
+  }
   .title {
-    margin-bottom: 30px;
+    margin: 20px auto;
   }
   .btn {
-    width: 90%!important;
+    width: 320px;
     margin: 30px auto 30px auto;
   }
   .code {
