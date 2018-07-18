@@ -42,8 +42,8 @@ class WxController {
     ctx.body = err ? errorBody(err, '预览二维码返回失败') : successBody(data, '预览二维码返回成功')
   }
 
-  static async upload(ctx) {
-    const [err, data] = await this.upload()
+  static async upload (ctx) {
+    const [err, data] = await upload()
     ctx.body = err ? errorBody(err, '上传版本返回失败') : successBody(data, '上传版本返回成功')
   }
 }
