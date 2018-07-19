@@ -1,13 +1,11 @@
 const axios = require('axios')
-const config = require('../../config')
-const isProduction = process.env.NODE_ENV === 'production'
-const host = isProduction ? config.build.host : config.dev.host
+const host = '127.0.0.1'
 /**
  * 打开项目
  */
 export function openProject () {
   return new Promise((resolve, reject) => {
-    axios.get(`${host}:9871/api/open`)
+    axios.get(`http://${host}:9871/api/open`)
       .then((res) => {
         resolve(res)
       })
@@ -21,7 +19,7 @@ export function openProject () {
  */
 export function login () {
   return new Promise((resolve, reject) => {
-    axios.get(`${host}:9871/api/login`)
+    axios.get(`http://${host}:9871/api/login`)
       .then((res) => {
         resolve(res)
       })
@@ -35,7 +33,7 @@ export function login () {
  */
 export function previewProject () {
   return new Promise((resolve, reject) => {
-    axios.get(`${host}:9871/api/preview`)
+    axios.get(`http://${host}:9871/api/preview`)
       .then((res) => {
         resolve(res)
       })
@@ -49,7 +47,7 @@ export function previewProject () {
  */
 export function buildProject () {
   return new Promise((resolve, reject) => {
-    axios.get(`${host}:9871/api/build`)
+    axios.get(`http://${host}:9871/api/build`)
       .then((res) => {
         resolve(res)
       })
@@ -63,7 +61,7 @@ export function buildProject () {
  */
 export function upload () {
   return new Promise((resolve, reject) => {
-    axios.get(`${host}:9871/api/upload`)
+    axios.get(`http://${host}:9871/api/upload`)
       .then((res) => {
         resolve(res)
       })

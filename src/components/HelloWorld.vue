@@ -96,8 +96,8 @@ export default {
     margin: 20px auto;
   }
   .btn {
-    width: 320px;
-    margin: 30px auto 30px auto;
+    width: 320px !important;
+    margin: 30px auto 30px auto !important;
   }
   .code {
     display: flex;

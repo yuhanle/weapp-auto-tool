@@ -21,6 +21,9 @@
 ## Start Server
 
 ``` bash
+# install dependencies
+npm install
+
 # start server
 node server
 ```
@@ -50,9 +53,11 @@ npm run e2e
 npm test
 ```
 
+编译之后，在浏览器中打开 [http://127.0.0.1:9871](http://127.0.0.1:9871) 查看。
+
 ## TODO
 
-- [ ] 新增项目管理木块 
+- [ ] 新增项目管理模块
 - [ ] 自动抓取管理的仓库代码
 - [ ] 自动上传到微信小程序后台
 
